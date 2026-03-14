@@ -16,7 +16,7 @@ whiskers:
 	<CaptionRightTopMost>RGB({{ sapphire.rgb.r }}, {{ sapphire.rgb.g }}, {{ sapphire.rgb.b }})</CaptionRightTopMost>
 
 	<CaptionLeftNotConnected>RGB({{ red.rgb.r }}, {{ red.rgb.g }}, {{ red.rgb.b }})</CaptionLeftNotConnected>
-	<CaptionRightNotConnected>RGB({{ maroon.rgb.r }}, {{ maroon.rgb.g }}, {{ maroon.rgb.b }})</CaptionRightNotConnected>
+	<CaptionRightNotConnected>RGB({{ red.rgb.r }}, {{ red.rgb.g }}, {{ red.rgb.b }})</CaptionRightNotConnected>
 
 	<CaptionTextColor>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</CaptionTextColor>
 

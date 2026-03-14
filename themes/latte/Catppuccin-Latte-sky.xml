@@ -8,7 +8,7 @@
 	<CaptionRightTopMost>RGB(32, 159, 181)</CaptionRightTopMost>
 
 	<CaptionLeftNotConnected>RGB(210, 15, 57)</CaptionLeftNotConnected>
-	<CaptionRightNotConnected>RGB(230, 69, 83)</CaptionRightNotConnected>
+	<CaptionRightNotConnected>RGB(210, 15, 57)</CaptionRightNotConnected>
 
 	<CaptionTextColor>RGB(76, 79, 105)</CaptionTextColor>
 
