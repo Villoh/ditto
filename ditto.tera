@@ -1,0 +1,63 @@
+---
+whiskers:
+  version: "^2.8.0"
+  matrix:
+    - flavor
+    - accent
+  filename: "themes/{{flavor.identifier}}/Catppuccin-{{flavor.name}}-{{accent}}.xml"
+---
+<Ditto_Theme_File Version = "3" Author = "Catppuccin" Notes = "Catppuccin {{flavor.name}} Theme">
+
+	<!-- Caption: Mantle bg + accent right. TopMost uses Yellow (warning). NotConnected uses Red (error). -->
+	<CaptionLeft>RGB({{ mantle.rgb.r }}, {{ mantle.rgb.g }}, {{ mantle.rgb.b }})</CaptionLeft>
+	<CaptionRight>RGB({{ flavor.colors[accent].rgb.r }}, {{ flavor.colors[accent].rgb.g }}, {{ flavor.colors[accent].rgb.b }})</CaptionRight>
+
+	<CaptionLeftTopMost>RGB({{ mantle.rgb.r }}, {{ mantle.rgb.g }}, {{ mantle.rgb.b }})</CaptionLeftTopMost>
+	<CaptionRightTopMost>RGB({{ sapphire.rgb.r }}, {{ sapphire.rgb.g }}, {{ sapphire.rgb.b }})</CaptionRightTopMost>
+
+	<CaptionLeftNotConnected>RGB({{ red.rgb.r }}, {{ red.rgb.g }}, {{ red.rgb.b }})</CaptionLeftNotConnected>
+	<CaptionRightNotConnected>RGB({{ maroon.rgb.r }}, {{ maroon.rgb.g }}, {{ maroon.rgb.b }})</CaptionRightNotConnected>
+
+	<CaptionTextColor>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</CaptionTextColor>
+
+	<!-- Alternating rows: Base / Surface 0 -->
+	<ListBoxEvenRowsBG>RGB({{ base.rgb.r }}, {{ base.rgb.g }}, {{ base.rgb.b }})</ListBoxEvenRowsBG>
+	<ListBoxOddRowsBG>RGB({{ surface0.rgb.r }}, {{ surface0.rgb.g }}, {{ surface0.rgb.b }})</ListBoxOddRowsBG>
+
+	<ListBoxEvenRowsText>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</ListBoxEvenRowsText>
+	<ListBoxOddRowsText>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</ListBoxOddRowsText>
+
+	<!-- Selection: Surface 2 bg (Overlay 2 without opacity), Lavender text -->
+	<ListBoxSelectedBG>RGB({{ surface2.rgb.r }}, {{ surface2.rgb.g }}, {{ surface2.rgb.b }})</ListBoxSelectedBG>
+	<ListBoxSelectedNoFocusBG>RGB({{ surface1.rgb.r }}, {{ surface1.rgb.g }}, {{ surface1.rgb.b }})</ListBoxSelectedNoFocusBG>
+
+	<ListBoxSelectedText>RGB({{ flavor.colors[accent].rgb.r }}, {{ flavor.colors[accent].rgb.g }}, {{ flavor.colors[accent].rgb.b }})</ListBoxSelectedText>
+	<ListBoxSelectedNoFocusText>RGB({{ subtext0.rgb.r }}, {{ subtext0.rgb.g }}, {{ subtext0.rgb.b }})</ListBoxSelectedNoFocusText>
+
+	<!-- Borders: Surface 2 default, Lavender for active/topmost, Red for error -->
+	<Border>RGB({{ surface2.rgb.r }}, {{ surface2.rgb.g }}, {{ surface2.rgb.b }})</Border>
+	<BorderTopMost>RGB({{ lavender.rgb.r }}, {{ lavender.rgb.g }}, {{ lavender.rgb.b }})</BorderTopMost>
+	<BorderNotConnected>RGB({{ red.rgb.r }}, {{ red.rgb.g }}, {{ red.rgb.b }})</BorderNotConnected>
+
+	<!-- Group tree: Mantle bg, Accent for group labels -->
+	<GroupTreeBG>RGB({{ mantle.rgb.r }}, {{ mantle.rgb.g }}, {{ mantle.rgb.b }})</GroupTreeBG>
+	<GroupTreeText>RGB({{ flavor.colors[accent].rgb.r }}, {{ flavor.colors[accent].rgb.g }}, {{ flavor.colors[accent].rgb.b }})</GroupTreeText>
+
+	<CaptionSize>20</CaptionSize>
+	<CaptionFontSize>18</CaptionFontSize>
+
+	<DescriptionWindowBG>RGB({{ base.rgb.r }}, {{ base.rgb.g }}, {{ base.rgb.b }})</DescriptionWindowBG>
+	<DescriptionWindowText>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</DescriptionWindowText>
+
+	<MainWindowBG>RGB({{ base.rgb.r }}, {{ base.rgb.g }}, {{ base.rgb.b }})</MainWindowBG>
+
+	<!-- Green for a pasted clip: success indicator -->
+	<ClipPastedColor>RGB({{ green.rgb.r }}, {{ green.rgb.g }}, {{ green.rgb.b }})</ClipPastedColor>
+
+	<!-- Search: Base bg, Text for input, Lavender active border, Yellow highlight -->
+	<SearchTextBoxFocusBG>RGB({{ base.rgb.r }}, {{ base.rgb.g }}, {{ base.rgb.b }})</SearchTextBoxFocusBG>
+	<SearchTextBoxFocusText>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</SearchTextBoxFocusText>
+	<SearchTextBoxFocusBorder>RGB({{ lavender.rgb.r }}, {{ lavender.rgb.g }}, {{ lavender.rgb.b }})</SearchTextBoxFocusBorder>
+	<SearchTextHighlight>RGB({{ yellow.rgb.r }}, {{ yellow.rgb.g }}, {{ yellow.rgb.b }})</SearchTextHighlight>
+
+</Ditto_Theme_File>

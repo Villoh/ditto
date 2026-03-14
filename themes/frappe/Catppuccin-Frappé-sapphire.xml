@@ -1,0 +1,55 @@
+<Ditto_Theme_File Version = "3" Author = "Catppuccin" Notes = "Catppuccin Frappé Theme">
+
+	<!-- Caption: Mantle bg + accent right. TopMost uses Yellow (warning). NotConnected uses Red (error). -->
+	<CaptionLeft>RGB(41, 44, 60)</CaptionLeft>
+	<CaptionRight>RGB(133, 193, 220)</CaptionRight>
+
+	<CaptionLeftTopMost>RGB(41, 44, 60)</CaptionLeftTopMost>
+	<CaptionRightTopMost>RGB(133, 193, 220)</CaptionRightTopMost>
+
+	<CaptionLeftNotConnected>RGB(231, 130, 132)</CaptionLeftNotConnected>
+	<CaptionRightNotConnected>RGB(234, 153, 156)</CaptionRightNotConnected>
+
+	<CaptionTextColor>RGB(198, 208, 245)</CaptionTextColor>
+
+	<!-- Alternating rows: Base / Surface 0 -->
+	<ListBoxEvenRowsBG>RGB(48, 52, 70)</ListBoxEvenRowsBG>
+	<ListBoxOddRowsBG>RGB(65, 69, 89)</ListBoxOddRowsBG>
+
+	<ListBoxEvenRowsText>RGB(198, 208, 245)</ListBoxEvenRowsText>
+	<ListBoxOddRowsText>RGB(198, 208, 245)</ListBoxOddRowsText>
+
+	<!-- Selection: Surface 2 bg (Overlay 2 without opacity), Lavender text -->
+	<ListBoxSelectedBG>RGB(98, 104, 128)</ListBoxSelectedBG>
+	<ListBoxSelectedNoFocusBG>RGB(81, 87, 109)</ListBoxSelectedNoFocusBG>
+
+	<ListBoxSelectedText>RGB(133, 193, 220)</ListBoxSelectedText>
+	<ListBoxSelectedNoFocusText>RGB(165, 173, 206)</ListBoxSelectedNoFocusText>
+
+	<!-- Borders: Surface 2 default, Lavender for active/topmost, Red for error -->
+	<Border>RGB(98, 104, 128)</Border>
+	<BorderTopMost>RGB(186, 187, 241)</BorderTopMost>
+	<BorderNotConnected>RGB(231, 130, 132)</BorderNotConnected>
+
+	<!-- Group tree: Mantle bg, Accent for group labels -->
+	<GroupTreeBG>RGB(41, 44, 60)</GroupTreeBG>
+	<GroupTreeText>RGB(133, 193, 220)</GroupTreeText>
+
+	<CaptionSize>20</CaptionSize>
+	<CaptionFontSize>18</CaptionFontSize>
+
+	<DescriptionWindowBG>RGB(48, 52, 70)</DescriptionWindowBG>
+	<DescriptionWindowText>RGB(198, 208, 245)</DescriptionWindowText>
+
+	<MainWindowBG>RGB(48, 52, 70)</MainWindowBG>
+
+	<!-- Green for a pasted clip: success indicator -->
+	<ClipPastedColor>RGB(166, 209, 137)</ClipPastedColor>
+
+	<!-- Search: Base bg, Text for input, Lavender active border, Yellow highlight -->
+	<SearchTextBoxFocusBG>RGB(48, 52, 70)</SearchTextBoxFocusBG>
+	<SearchTextBoxFocusText>RGB(198, 208, 245)</SearchTextBoxFocusText>
+	<SearchTextBoxFocusBorder>RGB(186, 187, 241)</SearchTextBoxFocusBorder>
+	<SearchTextHighlight>RGB(229, 200, 144)</SearchTextHighlight>
+
+</Ditto_Theme_File>
