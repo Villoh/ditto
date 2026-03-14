@@ -36,7 +36,10 @@
 
 ## Usage
 
-1. Download the [latest release](https://github.com/catppuccin/ditto/releases/latest) of the theme.
+1. Download the [latest release](https://github.com/Villoh/ditto/releases/latest) or clone the repository:
+   ```sh
+   git clone https://github.com/Villoh/ditto.git
+   ```
 2. Copy or move the desired `*.xml` file(s) to the Ditto themes folder:
    - **Installed version:** `C:\Program Files\Ditto\Themes`
    - **Portable version:** `Themes\` folder inside your Ditto directory
