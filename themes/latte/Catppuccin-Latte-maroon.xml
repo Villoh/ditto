@@ -1,8 +1,8 @@
 <Ditto_Theme_File Version = "3" Author = "Catppuccin" Notes = "Catppuccin Latte Theme">
 
-	<!-- Caption: Mantle bg + Green right. TopMost uses Yellow (warning). NotConnected uses Red (error). -->
+	<!-- Caption: Mantle bg + accent right. TopMost uses Yellow (warning). NotConnected uses Red (error). -->
 	<CaptionLeft>RGB(230, 233, 239)</CaptionLeft>
-	<CaptionRight>RGB(136, 57, 239)</CaptionRight>
+	<CaptionRight>RGB(230, 69, 83)</CaptionRight>
 
 	<CaptionLeftTopMost>RGB(230, 233, 239)</CaptionLeftTopMost>
 	<CaptionRightTopMost>RGB(32, 159, 181)</CaptionRightTopMost>
@@ -23,7 +23,7 @@
 	<ListBoxSelectedBG>RGB(172, 176, 190)</ListBoxSelectedBG>
 	<ListBoxSelectedNoFocusBG>RGB(188, 192, 204)</ListBoxSelectedNoFocusBG>
 
-	<ListBoxSelectedText>RGB(136, 57, 239)</ListBoxSelectedText>
+	<ListBoxSelectedText>RGB(230, 69, 83)</ListBoxSelectedText>
 	<ListBoxSelectedNoFocusText>RGB(108, 111, 133)</ListBoxSelectedNoFocusText>
 
 	<!-- Borders: Surface 2 default, Lavender for active/topmost, Red for error -->
@@ -31,9 +31,9 @@
 	<BorderTopMost>RGB(114, 135, 253)</BorderTopMost>
 	<BorderNotConnected>RGB(210, 15, 57)</BorderNotConnected>
 
-	<!-- Group tree: Mantle bg, Mauve for group labels -->
+	<!-- Group tree: Mantle bg, Accent for group labels -->
 	<GroupTreeBG>RGB(230, 233, 239)</GroupTreeBG>
-	<GroupTreeText>RGB(136, 57, 239)</GroupTreeText>
+	<GroupTreeText>RGB(230, 69, 83)</GroupTreeText>
 
 	<CaptionSize>20</CaptionSize>
 	<CaptionFontSize>18</CaptionFontSize>
