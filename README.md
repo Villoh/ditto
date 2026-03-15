@@ -54,6 +54,7 @@
 ## 💝 Thanks to
 
 - [Villoh](https://github.com/Villoh)
+- [scarcekoi](https://github.com/scarcekoi)
 
 &nbsp;
 
