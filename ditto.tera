@@ -4,60 +4,64 @@ whiskers:
   matrix:
     - flavor
     - accent
-  filename: "themes/{{flavor.identifier}}/Catppuccin-{{flavor.name}}-{{accent}}.xml"
+  filename: "themes/{{ flavor.identifier }}/catppuccin-{{ flavor.identifier }}-{{ accent }}.xml"
 ---
-<Ditto_Theme_File Version = "3" Author = "Catppuccin" Notes = "Catppuccin {{flavor.name}} Theme">
+{%- macro rgb(c) -%}
+RGB({{ c.rgb.r }}, {{ c.rgb.g }}, {{ c.rgb.b }})
+{%- endmacro rgb -%}
+{%- set accent = flavor.colors[accent] -%}
++<Ditto_Theme_File Version = "3" Author = "Catppuccin" Notes = "Catppuccin {{ flavor.name }} ({{ accent.name }})">
 
 	<!-- Caption: Mantle bg + accent right. TopMost uses Yellow (warning). NotConnected uses Red (error). -->
-	<CaptionLeft>RGB({{ mantle.rgb.r }}, {{ mantle.rgb.g }}, {{ mantle.rgb.b }})</CaptionLeft>
-	<CaptionRight>RGB({{ flavor.colors[accent].rgb.r }}, {{ flavor.colors[accent].rgb.g }}, {{ flavor.colors[accent].rgb.b }})</CaptionRight>
+	<CaptionLeft>{{ self::rgb(c=mantle) }}</CaptionLeft>
+	<CaptionRight>{{ self::rgb(c=accent) }}</CaptionRight>
 
-	<CaptionLeftTopMost>RGB({{ mantle.rgb.r }}, {{ mantle.rgb.g }}, {{ mantle.rgb.b }})</CaptionLeftTopMost>
-	<CaptionRightTopMost>RGB({{ sapphire.rgb.r }}, {{ sapphire.rgb.g }}, {{ sapphire.rgb.b }})</CaptionRightTopMost>
+	<CaptionLeftTopMost>{{ self::rgb(c=mantle) }}</CaptionLeftTopMost>
+	<CaptionRightTopMost>{{ self::rgb(c=sapphire) }}</CaptionRightTopMost>
 
-	<CaptionLeftNotConnected>RGB({{ red.rgb.r }}, {{ red.rgb.g }}, {{ red.rgb.b }})</CaptionLeftNotConnected>
-	<CaptionRightNotConnected>RGB({{ red.rgb.r }}, {{ red.rgb.g }}, {{ red.rgb.b }})</CaptionRightNotConnected>
+	<CaptionLeftNotConnected>{{ self::rgb(c=red) }}</CaptionLeftNotConnected>
+	<CaptionRightNotConnected>{{ self::rgb(c=red) }}</CaptionRightNotConnected>
 
-	<CaptionTextColor>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</CaptionTextColor>
+	<CaptionTextColor>{{ self::rgb(c=text) }}</CaptionTextColor>
 
 	<!-- Alternating rows: Base / Surface 0 -->
-	<ListBoxEvenRowsBG>RGB({{ base.rgb.r }}, {{ base.rgb.g }}, {{ base.rgb.b }})</ListBoxEvenRowsBG>
-	<ListBoxOddRowsBG>RGB({{ surface0.rgb.r }}, {{ surface0.rgb.g }}, {{ surface0.rgb.b }})</ListBoxOddRowsBG>
+	<ListBoxEvenRowsBG>{{ self::rgb(c=base) }}</ListBoxEvenRowsBG>
+	<ListBoxOddRowsBG>{{ self::rgb(c=surface0) }}</ListBoxOddRowsBG>
 
-	<ListBoxEvenRowsText>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</ListBoxEvenRowsText>
-	<ListBoxOddRowsText>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</ListBoxOddRowsText>
+	<ListBoxEvenRowsText>{{ self::rgb(c=text) }}</ListBoxEvenRowsText>
+	<ListBoxOddRowsText>{{ self::rgb(c=text) }}</ListBoxOddRowsText>
 
 	<!-- Selection: Surface 2 bg (Overlay 2 without opacity), Lavender text -->
-	<ListBoxSelectedBG>RGB({{ surface2.rgb.r }}, {{ surface2.rgb.g }}, {{ surface2.rgb.b }})</ListBoxSelectedBG>
-	<ListBoxSelectedNoFocusBG>RGB({{ surface1.rgb.r }}, {{ surface1.rgb.g }}, {{ surface1.rgb.b }})</ListBoxSelectedNoFocusBG>
+	<ListBoxSelectedBG>{{ self::rgb(c=surface2) }}</ListBoxSelectedBG>
+	<ListBoxSelectedNoFocusBG>{{ self::rgb(c=surface1) }}</ListBoxSelectedNoFocusBG>
 
-	<ListBoxSelectedText>RGB({{ flavor.colors[accent].rgb.r }}, {{ flavor.colors[accent].rgb.g }}, {{ flavor.colors[accent].rgb.b }})</ListBoxSelectedText>
+	<ListBoxSelectedText>{{ self::rgb(c=accent) }}</ListBoxSelectedText>
 	<ListBoxSelectedNoFocusText>RGB({{ subtext0.rgb.r }}, {{ subtext0.rgb.g }}, {{ subtext0.rgb.b }})</ListBoxSelectedNoFocusText>
 
 	<!-- Borders: Surface 2 default, Lavender for active/topmost, Red for error -->
-	<Border>RGB({{ surface2.rgb.r }}, {{ surface2.rgb.g }}, {{ surface2.rgb.b }})</Border>
-	<BorderTopMost>RGB({{ lavender.rgb.r }}, {{ lavender.rgb.g }}, {{ lavender.rgb.b }})</BorderTopMost>
-	<BorderNotConnected>RGB({{ red.rgb.r }}, {{ red.rgb.g }}, {{ red.rgb.b }})</BorderNotConnected>
+	<Border>{{ self::rgb(c=surface2) }}</Border>
+	<BorderTopMost>{{ self::rgb(c=lavender) }}</BorderTopMost>
+	<BorderNotConnected>{{ self::rgb(c=red) }}</BorderNotConnected>
 
 	<!-- Group tree: Mantle bg, Accent for group labels -->
-	<GroupTreeBG>RGB({{ mantle.rgb.r }}, {{ mantle.rgb.g }}, {{ mantle.rgb.b }})</GroupTreeBG>
-	<GroupTreeText>RGB({{ flavor.colors[accent].rgb.r }}, {{ flavor.colors[accent].rgb.g }}, {{ flavor.colors[accent].rgb.b }})</GroupTreeText>
+	<GroupTreeBG>{{ self::rgb(c=mantle) }}</GroupTreeBG>
+	<GroupTreeText>{{ self::rgb(c=accent) }}</GroupTreeText>
 
 	<CaptionSize>20</CaptionSize>
 	<CaptionFontSize>18</CaptionFontSize>
 
-	<DescriptionWindowBG>RGB({{ base.rgb.r }}, {{ base.rgb.g }}, {{ base.rgb.b }})</DescriptionWindowBG>
-	<DescriptionWindowText>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</DescriptionWindowText>
+	<DescriptionWindowBG>{{ self::rgb(c=base) }}</DescriptionWindowBG>
+	<DescriptionWindowText>{{ self::rgb(c=text) }}</DescriptionWindowText>
 
-	<MainWindowBG>RGB({{ base.rgb.r }}, {{ base.rgb.g }}, {{ base.rgb.b }})</MainWindowBG>
+	<MainWindowBG>{{ self::rgb(c=base) }}</MainWindowBG>
 
 	<!-- Green for a pasted clip: success indicator -->
-	<ClipPastedColor>RGB({{ green.rgb.r }}, {{ green.rgb.g }}, {{ green.rgb.b }})</ClipPastedColor>
+	<ClipPastedColor>{{ self::rgb(c=green) }}</ClipPastedColor>
 
 	<!-- Search: Base bg, Text for input, Lavender active border, Yellow highlight -->
-	<SearchTextBoxFocusBG>RGB({{ base.rgb.r }}, {{ base.rgb.g }}, {{ base.rgb.b }})</SearchTextBoxFocusBG>
-	<SearchTextBoxFocusText>RGB({{ text.rgb.r }}, {{ text.rgb.g }}, {{ text.rgb.b }})</SearchTextBoxFocusText>
-	<SearchTextBoxFocusBorder>RGB({{ lavender.rgb.r }}, {{ lavender.rgb.g }}, {{ lavender.rgb.b }})</SearchTextBoxFocusBorder>
-	<SearchTextHighlight>RGB({{ yellow.rgb.r }}, {{ yellow.rgb.g }}, {{ yellow.rgb.b }})</SearchTextHighlight>
+	<SearchTextBoxFocusBG>{{ self::rgb(c=base) }}</SearchTextBoxFocusBG>
+	<SearchTextBoxFocusText>{{ self::rgb(c=text) }}</SearchTextBoxFocusText>
+	<SearchTextBoxFocusBorder>{{ self::rgb(c=lavender) }}</SearchTextBoxFocusBorder>
+	<SearchTextHighlight>{{ self::rgb(c=yellow) }}</SearchTextHighlight>
 
 </Ditto_Theme_File>
