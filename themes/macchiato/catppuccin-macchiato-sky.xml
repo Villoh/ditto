@@ -1,4 +1,4 @@
-+<Ditto_Theme_File Version = "3" Author = "Catppuccin" Notes = "Catppuccin Macchiato (Sky)">
+<Ditto_Theme_File Version = "3" Author = "Catppuccin" Notes = "Catppuccin Macchiato (Sky)">
 
 	<!-- Caption: Mantle bg + accent right. TopMost uses Yellow (warning). NotConnected uses Red (error). -->
 	<CaptionLeft>RGB(30, 32, 48)</CaptionLeft>

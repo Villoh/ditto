@@ -10,7 +10,7 @@ whiskers:
 RGB({{ c.rgb.r }}, {{ c.rgb.g }}, {{ c.rgb.b }})
 {%- endmacro rgb -%}
 {%- set accent = flavor.colors[accent] -%}
-+<Ditto_Theme_File Version = "3" Author = "Catppuccin" Notes = "Catppuccin {{ flavor.name }} ({{ accent.name }})">
+<Ditto_Theme_File Version = "3" Author = "Catppuccin" Notes = "Catppuccin {{ flavor.name }} ({{ accent.name }})">
 
 	<!-- Caption: Mantle bg + accent right. TopMost uses Yellow (warning). NotConnected uses Red (error). -->
 	<CaptionLeft>{{ self::rgb(c=mantle) }}</CaptionLeft>
@@ -36,7 +36,7 @@ RGB({{ c.rgb.r }}, {{ c.rgb.g }}, {{ c.rgb.b }})
 	<ListBoxSelectedNoFocusBG>{{ self::rgb(c=surface1) }}</ListBoxSelectedNoFocusBG>
 
 	<ListBoxSelectedText>{{ self::rgb(c=accent) }}</ListBoxSelectedText>
-	<ListBoxSelectedNoFocusText>RGB({{ subtext0.rgb.r }}, {{ subtext0.rgb.g }}, {{ subtext0.rgb.b }})</ListBoxSelectedNoFocusText>
+	<ListBoxSelectedNoFocusText>{{ self::rgb(c=subtext0) }}</ListBoxSelectedNoFocusText>
 
 	<!-- Borders: Surface 2 default, Lavender for active/topmost, Red for error -->
 	<Border>{{ self::rgb(c=surface2) }}</Border>
